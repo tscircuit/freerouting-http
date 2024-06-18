@@ -1,0 +1,14 @@
+{
+  "name": "freerouting-http",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "download-freerouting-jar": "wget https://github.com/freerouting/freerouting/releases/download/v1.9.0/freerouting-1.9.0.jar"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
