@@ -5,16 +5,23 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "FREEROUTING_JAR_PATH=./freerouting-1.9.0.jar edgespec dev",
-    "download-freerouting-jar": "wget https://github.com/freerouting/freerouting/releases/download/v1.9.0/freerouting-1.9.0.jar"
+    "download-freerouting-jar": "wget https://github.com/freerouting/freerouting/releases/download/v1.9.0/freerouting-1.9.0.jar",
+    "db:migrate": "pgstrap migrate",
+    "db:reset": "pgstrap reset",
+    "db:generate": "pgstrap generate",
+    "db:create-migration": "pgstrap create-migration"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "graphile-worker": "^0.16.6",
+    "pgstrap": "^1.0.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "edgespec": "^0.0.72",
+    "pg-connection-from-env": "^1.1.0",
     "zod": "^3.23.8"
   }
 }
