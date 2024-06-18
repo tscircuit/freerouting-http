@@ -3,16 +3,18 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "FREEROUTING_JAR_PATH=./freerouting-1.9.0.jar edgespec dev",
+    "start": "concurrently 'bun run start:server' 'bun run start:worker'",
+    "start:server": "FREEROUTING_JAR_PATH=./freerouting-1.9.0.jar edgespec dev",
     "download-freerouting-jar": "wget https://github.com/freerouting/freerouting/releases/download/v1.9.0/freerouting-1.9.0.jar",
     "db:migrate": "pgstrap migrate",
     "db:reset": "pgstrap reset",
     "db:generate": "pgstrap generate",
-    "db:create-migration": "pgstrap create-migration"
+    "db:create-migration": "pgstrap create-migration",
+    "start:worker": "bunx --bun graphile-worker -C ./graphile.config.js"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "concurrently": "^8.2.2",
     "graphile-worker": "^0.16.6",
     "pgstrap": "^1.0.2"
   },
