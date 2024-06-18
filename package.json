@@ -5,12 +5,12 @@
   "scripts": {
     "start": "concurrently 'bun run start:server' 'bun run start:worker'",
     "start:server": "FREEROUTING_JAR_PATH=./freerouting-1.9.0.jar edgespec dev",
+    "start:worker": "bunx --bun graphile-worker -C ./graphile.config.js",
     "download-freerouting-jar": "wget https://github.com/freerouting/freerouting/releases/download/v1.9.0/freerouting-1.9.0.jar",
     "db:migrate": "pgstrap migrate",
     "db:reset": "pgstrap reset",
     "db:generate": "pgstrap generate",
-    "db:create-migration": "pgstrap create-migration",
-    "start:worker": "bunx --bun graphile-worker -C ./graphile.config.js"
+    "db:create-migration": "pgstrap create-migration"
   },
   "devDependencies": {
     "@types/bun": "latest",
