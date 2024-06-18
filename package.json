@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "npm run dev",
-    "dev": "edgespec dev",
+    "dev": "FREEROUTING_JAR_PATH=./freerouting-1.9.0.jar edgespec dev",
     "download-freerouting-jar": "wget https://github.com/freerouting/freerouting/releases/download/v1.9.0/freerouting-1.9.0.jar"
   },
   "devDependencies": {
