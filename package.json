@@ -14,7 +14,7 @@
   "devDependencies": {
     "@types/bun": "latest",
     "graphile-worker": "^0.16.6",
-    "pgstrap": "^1.0.1"
+    "pgstrap": "^1.0.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

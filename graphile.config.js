@@ -1,4 +1,5 @@
 import { getConnectionStringFromEnv } from "pg-connection-from-env"
+
 export default {
   worker: {
     connectionString: getConnectionStringFromEnv({

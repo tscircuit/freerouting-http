@@ -1,7 +1,8 @@
 export default {
   "defaultDatabase": "frh", // freerouting-http ~ frh
   "schemas": [
-    "public"
+    "public",
+    "graphile_worker"
   ],
   "dbDir": "./db"
 }
