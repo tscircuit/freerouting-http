@@ -3,6 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
+    "start": "npm run dev",
+    "dev": "edgespec dev",
     "download-freerouting-jar": "wget https://github.com/freerouting/freerouting/releases/download/v1.9.0/freerouting-1.9.0.jar"
   },
   "devDependencies": {
@@ -10,5 +12,9 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "edgespec": "^0.0.72",
+    "zod": "^3.23.8"
   }
 }
